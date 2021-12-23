@@ -48,7 +48,7 @@ Bei der Erstellung der INTERLIS-Transferdatei müssen zwingend das Thema und die
 Falls Style verändert werden müssen oder neue dazu kommen, muss zuerst das QGIS-Projekt "oereb-symbols.qgs" nachgeführt werden. Dies wird im Git-Repository https://github.com/sogis-oereb/oereb-wms gemacht. Die Pipeline erstellt nach dem Pushen ein neues `sogis/oereb-wms` Docker Image. Anschliessend kann der Docker Container gestartet werden:
 
 ```
-docker run -p 8083:80 sogis/oereb-wms:2
+docker run -e QGIS_FCGI_MIN_PROCESSES=2 -e QGIS_FCGI_MAX_PROCESSES=2 -p 8083:80 sogis/oereb-wms:2
 ```
 
 _Oereb-iconizer_ kann als Fatjar hier https://github.com/sogis-oereb/oereb-iconizer/releases/latest heruntergeladen werden.
