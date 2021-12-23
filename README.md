@@ -51,7 +51,7 @@ Falls Style verändert werden müssen oder neue dazu kommen, muss zuerst das QGI
 docker run -p 8083:80 sogis/oereb-wms:2
 ```
 
-FIXME: **_Oereb-iconizer_ kann als Fatjar hier XXXXXXXXX heruntergeladen werden (siehe Link "Fat jar"). Der Link zeigt auf einen Artifact der Buildpipeline. Falls dieser nach einer gewissen Zeit automatisch gelöscht wird, muss in Betracht gezogen werden, die Fatjar-Datei im Maven-Repo zu publizieren.**
+_Oereb-iconizer_ kann als Fatjar hier https://github.com/sogis-oereb/oereb-iconizer/releases/latest heruntergeladen werden.
 
 Erstellen der Symbole und der INTERLIS-Transferdatei:
 ```
