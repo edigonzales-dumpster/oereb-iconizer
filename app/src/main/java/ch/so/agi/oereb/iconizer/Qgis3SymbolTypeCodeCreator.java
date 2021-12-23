@@ -160,10 +160,6 @@ public class Qgis3SymbolTypeCodeCreator implements SymbolTypeCodeCreator {
      * Hier folgt der sehr spezifische Teil: Der TypeCode/Artcode des OEREB-Rahmenmodells ist der Wert
      * des <Literal> Elements im <PropertyIsEqualTo> Filter. Die <ogc:Function> kann im Prinzip 
      * beliebig kompliziert sein. 
-     * Achtung: Im "Substring"-Modus entspricht der Wert des <Literal> Elements 
-     * nur einem Substring des TypeCodes/Artcodes. Man muss aber zum jetzigen Zeitpunkt (d.h. beim Herstellen
-     * der Symbole) noch nicht wissen, dass später der Substring-Modus gilt. Hier und jetzt werden bloss 
-     * "dumm" alle Symbole eines WMS-Layers hergestellt.
      */
     private String evaluateFilter(Node node) {
         NodeList nodes = node.getChildNodes();

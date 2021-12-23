@@ -7,7 +7,7 @@ _Oereb-iconizer_ hat folgende Funktionen:
 
 1. Erstellung von Einzelsymbolen (`BufferedImage`) anhand einer "GetStyles"- und "GetLegendGraphic"-Antwort.
 2. Speicherung der Einzelsymbole auf dem Filesystem.
-3. Erstellung einer INTERLIS-Transferdatei mit den Symbolen als `BLACKBOX BINARY`.
+3. Erstellung einer INTERLIS-Transferdatei (Modell: https://geo.so.ch/models/AGI/SO_AGI_OeREB_Legendeneintraege_20211020.ili) mit den Symbolen als `BLACKBOX BINARY`.
 
 Implementiert ist die Erstellung der Symbole (Schritt 1) für QGIS-Server 3.x. Andere Implementierungen müssen sich vor allem um den unterschiedlichen Aufruf des Einzelsymbole-GetLegenendGraphic-Requests und die Parse-Logik der GetStyles-Antwort kümmern. 
 
