@@ -61,6 +61,8 @@ run {
 }
 
 jreleaser {
+    gitRootSearch = true
+    
     project {
         name = 'oereb-iconizer'
         description = 'Create icons for OEREB-Kataster from a WMS and stores them in an INTERLIS file.'
