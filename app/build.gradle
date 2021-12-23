@@ -82,7 +82,7 @@ jreleaser {
         app {
             distributionType = 'SINGLE_JAR'
             artifact {
-                path = "app/build/libs/oereb-iconizer-${version}-all.jar"
+                path = "build/libs/oereb-iconizer-${version}-all.jar"
             }
             java {
                 groupId = 'ch.so.agi'
