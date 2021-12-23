@@ -35,7 +35,7 @@ jobs:
 
       - name: Build
         run: |
-          ./gradlew clean app:build
+          ./gradlew clean app:build -x test
           ls -la app/build/libs
 
       - name: Release 
