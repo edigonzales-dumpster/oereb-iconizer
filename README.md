@@ -54,8 +54,17 @@ docker run -e QGIS_FCGI_MIN_PROCESSES=2 -e QGIS_FCGI_MAX_PROCESSES=2 -p 8083:80 
 _Oereb-iconizer_ kann als Fatjar hier https://github.com/sogis-oereb/oereb-iconizer/releases/latest heruntergeladen werden.
 
 Erstellen der Symbole und der INTERLIS-Transferdatei:
+
+Planerischer Gewässerschutz:
 ```
-java -jar oereb-iconizer-2.0.XX-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.StatischeWaldgrenzen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.StatischeWaldgrenzen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=fubar.xtf --basketId=ch.so.agi.oereb.legendeneintraege --theme=ch.StatischeWaldgrenzen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Waldgrenzen
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.Grundwasserschutzzonen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.Grundwasserschutzzonen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_grundwasserschutzzonen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.zone --theme=ch.Grundwasserschutzzonen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Grundwasserschutzzonen
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.Grundwasserschutzareale&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.Grundwasserschutzareale&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_grundwasserschutzareale.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.areal --theme=ch.Grundwasserschutzareale --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Grundwasserschutzareale
+```
+
+Waldgrenzen:
+```
+java -jar oereb-iconizer-2.0.XX-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.StatischeWaldgrenzen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.StatischeWaldgrenzen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.awjf.oereb_statische_waldgrenzen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege --theme=ch.StatischeWaldgrenzen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Waldgrenzen
 ```
 
 Die Datei muss zum dazugehörigen OEREB-GRETL-Job kopiert werden (und ins Repo eingecheckt werden).
