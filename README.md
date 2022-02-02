@@ -76,6 +76,14 @@ java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oere
 java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Punkt&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Punkt&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_einzelschutz_geotop_punkt.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.punkt --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2020:Typ_geschuetztes_Geotop_Punkt
 ```
 
+Denkmalschutz (Einzelschutz):
+```
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Flaeche&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Flaeche&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.ada.oereb_einzelschutz_denkmal_flaeche.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.flaeche --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Flaeche
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Punkt&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Punkt&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.ada.oereb_einzelschutz_denkmal_punkt.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.punkt --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Punkt
+```
+
+
 Waldgrenzen:
 ```
 java -jar oereb-iconizer-2.0.XX-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.StatischeWaldgrenzen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.StatischeWaldgrenzen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.awjf.oereb_statische_waldgrenzen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege --theme=ch.StatischeWaldgrenzen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Waldgrenzen
