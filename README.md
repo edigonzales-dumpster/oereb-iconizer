@@ -55,9 +55,38 @@ _Oereb-iconizer_ kann als Fatjar hier https://github.com/sogis-oereb/oereb-iconi
 
 Erstellen der Symbole und der INTERLIS-Transferdatei:
 
-Statische Waldgrenzen:
+Planerischer Gewässerschutz:
 ```
-java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.StatischeWaldgrenzen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.StatischeWaldgrenzen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.awjf.oereb_statische_waldgrenzen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege --theme=ch.StatischeWaldgrenzen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Waldgrenzen
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.Grundwasserschutzzonen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.Grundwasserschutzzonen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_grundwasserschutzzonen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.zone --theme=ch.Grundwasserschutzzonen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Grundwasserschutzzonen
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.Grundwasserschutzareale&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.Grundwasserschutzareale&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_grundwasserschutzareale.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.areal --theme=ch.Grundwasserschutzareale --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Grundwasserschutzareale
+```
+
+Naturreservate (Einzelschutz + Nutzungsplanung):
+```
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Flaeche&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Flaeche&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.arp.oereb_einzelschutz_naturreservat_einzelschutz.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2019:Typ_Naturschutzgebiete_Flaeche
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.NutzungsplanungUeberlagernd.Flaeche&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.NutzungsplanungUeberlagernd.Flaeche&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.arp.oereb_einzelschutz_naturreservat_nutzungsplanung.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.nutzungsplanung --theme=ch.SO.NutzungsplanungUeberlagernd --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:NP_Typ_Kanton_Ueberlagernd_Flaeche.Naturreservat_Flaeche
+```
+
+Geotope (Einzelschutz):
+```
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Flaeche&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Flaeche&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_einzelschutz_geotop_flaeche.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.flaeche --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2020:Typ_geschuetztes_Geotop_Flaeche
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Punkt&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Punkt&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.afu.oereb_einzelschutz_geotop_punkt.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.punkt --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2020:Typ_geschuetztes_Geotop_Punkt
+```
+
+Denkmalschutz (Einzelschutz):
+```
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Flaeche&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Flaeche&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.ada.oereb_einzelschutz_denkmal_flaeche.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.flaeche --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Flaeche
+
+java -jar oereb-iconizer-2.0.10-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.SO.Einzelschutz.Punkt&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.SO.Einzelschutz.Punkt&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.ada.oereb_einzelschutz_denkmal_punkt.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege.einzelschutz.punkt --theme=ch.SO.Einzelschutz --typeCodeList=urn:fdc:ilismeta.interlis.ch:2019:Typ_geschuetztes_historisches_Kulturdenkmal_Punkt
+```
+
+
+Waldgrenzen:
+```
+java -jar oereb-iconizer-2.0.XX-all.jar --sldUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetStyles&LAYERS=ch.StatischeWaldgrenzen&SLD_VERSION=1.1.0" --legendGraphicUrl="http://localhost:8083/wms/oereb-symbols?SERVICE=WMS&REQUEST=GetLegendGraphic&LAYER=ch.StatischeWaldgrenzen&FORMAT=image/png&RULELABEL=false&LAYERTITLE=false&HEIGHT=35&WIDTH=70&SYMBOLHEIGHT=3&SYMBOLWIDTH=6&DPI=300" --fileName=ch.so.awjf.oereb_statische_waldgrenzen.symbole.xtf --basketId=ch.so.agi.oereb.legendeneintraege --theme=ch.StatischeWaldgrenzen --typeCodeList=urn:fdc:ilismeta.interlis.ch:2017:Typ_Kanton_Waldgrenzen
 ```
 
 Die Datei muss zum dazugehörigen OEREB-GRETL-Job kopiert werden (und ins Repo eingecheckt werden).
